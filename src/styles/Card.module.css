@@ -1,0 +1,59 @@
+/* card style */
+.cardContainer {
+  background-color: var(--bg-color);
+  border-radius: var(--spaceing-1);
+  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  overflow: hidden;
+  min-width: 240px;
+  cursor: pointer;
+}
+
+.cardContainer:active {
+  animation: clicked 1s;
+}
+
+.cardPicture {
+  height: 240px;
+}
+
+.cardContent {
+  padding: var(--spaceing-2);
+}
+
+.cardName,
+.cardDescription {
+  color: var(--secondary-color);
+  margin-top: var(--spaceing-1);
+}
+
+.cardPrice {
+  color: var(--primary-color);
+  text-align: end;
+  margin-top: var(--spaceing-2);
+}
+
+/* animetion */
+@keyframes clicked {
+  from {
+    opacity: 0.8;
+    transform: scale(0.99);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  to {
+    transform: scale(1.01);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+/* cardlist */
+.cardListContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spaceing-3);
+  padding: var(--spaceing-4);
+  overflow-x: auto;
+}
