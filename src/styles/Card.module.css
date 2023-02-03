@@ -1,4 +1,10 @@
 /* card style */
+.cardField {
+  position: relative;
+  height: 380px;
+  min-width: 240px;
+}
+
 .cardContainer {
   background-color: var(--bg-color);
   border-radius: var(--spaceing-1);
@@ -7,11 +13,7 @@
   -moz-box-shadow: var(--shadow);
   overflow: hidden;
   min-width: 240px;
-  cursor: pointer;
-}
-
-.cardContainer:active {
-  animation: clicked 1s;
+  position: absolute;
 }
 
 .cardPicture {
@@ -22,7 +24,10 @@
   padding: var(--spaceing-2);
 }
 
-.cardName,
+.cardName {
+  color: var(--secondary-color);
+}
+
 .cardDescription {
   color: var(--secondary-color);
   margin-top: var(--spaceing-1);
@@ -34,17 +39,32 @@
   margin-top: var(--spaceing-2);
 }
 
-/* animetion */
-@keyframes clicked {
-  from {
-    opacity: 0.8;
-    transform: scale(0.99);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  to {
-    transform: scale(1.01);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+.addToCartBtn {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: var(--spaceing-5);
+  height: var(--spaceing-5);
+  position: absolute;
+  left: var(--spaceing-2);
+  bottom: var(--spaceing-1);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+}
+
+.addToCartBtn:active {
+  animation: var(--clicked);
+}
+
+.addToCartIcon {
+  fill: var(--secondary-color);
+  width: var(--spaceing-3);
+  height: var(--spaceing-3);
 }
 
 /* cardlist */

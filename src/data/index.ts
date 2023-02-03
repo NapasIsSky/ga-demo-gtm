@@ -1,4 +1,22 @@
-import { IProduct } from "@/interfaces";
+import { IProduct, IUser } from "@/interfaces";
+
+export const userData: IUser[] = [
+  {
+    id: "01",
+    username: "NapDev",
+    password: "1",
+  },
+  {
+    id: "02",
+    username: "ZankDev",
+    password: "1",
+  },
+  {
+    id: "03",
+    username: "MhooDev",
+    password: "1",
+  },
+];
 
 export const productData: IProduct[] = [
   {
