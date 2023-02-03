@@ -78,8 +78,6 @@
   -webkit-box-shadow: var(--shadow);
   -moz-box-shadow: var(--shadow);
   position: absolute;
-  top: 8%;
-  right: 10%;
 }
 
 .logOutBtn:active {
@@ -93,8 +91,6 @@
   padding: var(--spaceing-2);
   border-radius: 50%;
   position: absolute;
-  right: 10%;
-  bottom: -8%;
   cursor: pointer;
 }
 
@@ -261,8 +257,8 @@
 }
 
 .total {
-  margin-top: var(--spaceing-4);
-  margin-right: 20%;
+  margin-top: var(--spaceing-5);
+  margin-right: 26%;
   align-self: end;
   color: var(--primary-color);
 }
@@ -271,7 +267,7 @@
   width: 10%;
   align-self: center;
   padding: var(--spaceing-2);
-  margin-top: var(--spaceing-4);
+  margin-top: var(--spaceing-5);
   border: none;
   box-shadow: var(--shadow);
   -webkit-box-shadow: var(--shadow);
@@ -284,4 +280,48 @@
 
 .checkOutBtn:active {
   animation: var(--clicked);
+}
+
+@media screen and (max-width: 600px) {
+  .cartBtn {
+    right: 10%;
+    bottom: -8%;
+  }
+  .logOutBtn {
+    top: -10%;
+    right: -10%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .cartBtn {
+    right: 10%;
+    bottom: -8%;
+  }
+  .logOutBtn {
+    top: 8%;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .cartBtn {
+    right: 10%;
+    bottom: -8%;
+  }
+  .logOutBtn {
+    top: 8%;
+    right: 10%;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .cartBtn {
+    right: 24%;
+    bottom: -8%;
+  }
+  .logOutBtn {
+    top: 8%;
+    right: 24%;
+  }
 }
