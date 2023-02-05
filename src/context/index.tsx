@@ -1,5 +1,6 @@
-import { IApp } from "@/interfaces";
 import React from "react";
+
+import { IApp } from "@/interfaces";
 
 export const AppContext = React.createContext<IApp | null>(null);
 
