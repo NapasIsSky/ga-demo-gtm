@@ -7,6 +7,7 @@ export interface IApp {
 
 export interface IUser {
   id: string;
+  code: string;
   username: string;
   password: string;
 }
