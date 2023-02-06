@@ -235,7 +235,7 @@ export default function Home() {
               className={styles.loginInput}
             />
           </div>
-          <button onClick={onLogin} className={styles.loginBtn}>
+          <button id="login_btn" onClick={onLogin} className={styles.loginBtn}>
             LOGIN
           </button>
         </div>
@@ -247,7 +247,7 @@ export default function Home() {
     return (
       <div className={styles.container}>
         <h1 className={styles.webTitle}>TOFUU E-MERCHANT</h1>
-        <button onClick={onLogOut} className={styles.logOutBtn}>
+        <button id="logout-btn" onClick={onLogOut} className={styles.logOutBtn}>
           <h4>LOG OUT</h4>
         </button>
         <CardList productList={productData} cartList={cartList} setCartList={setCartList} />
