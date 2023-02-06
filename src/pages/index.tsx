@@ -214,6 +214,15 @@ export default function Home() {
     }
   }, []);
 
+  React.useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "page_title",
+        page_title: document.title,
+      },
+    });
+  }, [step]);
+
   const renderLogin = () => {
     return (
       <div className={styles.loginContainer}>
