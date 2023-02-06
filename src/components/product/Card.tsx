@@ -21,7 +21,7 @@ const Card: React.FC<ICard> = (props) => {
           <h1 className={styles.cardPrice}>{`฿${product.price}`}</h1>
         </div>
       </div>
-      <div onClick={onClick} className={styles.addToCartBtn}>
+      <div id="add-to-cart-btn" onClick={onClick} className={styles.addToCartBtn}>
         <AddToCardIcon className={styles.addToCartIcon} />
       </div>
     </div>

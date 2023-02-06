@@ -251,7 +251,7 @@ export default function Home() {
           <h4>LOG OUT</h4>
         </button>
         <CardList productList={productData} cartList={cartList} setCartList={setCartList} />
-        <div onClick={onViewCart} className={styles.cartBtn}>
+        <div id="view-cart-btn" onClick={onViewCart} className={styles.cartBtn}>
           <CartIcon className={styles.cartIcon} />
           {cartList.length ? (
             <div className={styles.cartBadge}>
@@ -285,11 +285,19 @@ export default function Home() {
                   <h4 className={styles.orderName}>{item.product_detail.name}</h4>
                 </div>
                 <div className={styles.orderEndPart}>
-                  <div onClick={() => onRemoveQuantity(index)} className={styles.removeQty}>
+                  <div
+                    id="remove-from-cart-btn"
+                    onClick={() => onRemoveQuantity(index)}
+                    className={styles.removeQty}
+                  >
                     -
                   </div>
                   <input type="text" value={item.quantity} readOnly className={styles.showQty} />
-                  <div onClick={() => onAddQuantity(index)} className={styles.addQty}>
+                  <div
+                    id="add-to-cart-btn"
+                    onClick={() => onAddQuantity(index)}
+                    className={styles.addQty}
+                  >
                     +
                   </div>
                 </div>
@@ -362,7 +370,7 @@ export default function Home() {
           </div>
         </div>
 
-        <button onClick={onPurchase} className={styles.payBtn}>
+        <button id="purchase-btn" onClick={onPurchase} className={styles.payBtn}>
           <h3>PURCHESE</h3>
         </button>
       </div>
